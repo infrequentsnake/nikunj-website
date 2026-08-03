@@ -1,11 +1,11 @@
-# Nikunj Khurana — personal site
+# Nikunj Khurana, personal site
 
 Static personal site for Nikunj Khurana, an Actuarial Studies student at UNSW Sydney.
 
 ## Ground rules
 
 - **No build step and no dependencies.** There is no Node on this machine. Plain
-  HTML, CSS and vanilla JS only — do not introduce a framework, bundler or
+  HTML, CSS and vanilla JS only. Do not introduce a framework, bundler or
   `package.json` without being asked.
 - Run locally with `python3 -m http.server 4321 --directory .` (a `.claude/launch.json`
   is already set up, so `preview_start` with the name `nikunj-site` works).
@@ -14,7 +14,7 @@ Static personal site for Nikunj Khurana, an Actuarial Studies student at UNSW Sy
 
 ## Design language
 
-Warm, light and editorial — inspired by derivenotes.com.
+Warm, light and editorial, inspired by derivenotes.com.
 
 | Token | Value | Role |
 | --- | --- | --- |
@@ -24,15 +24,15 @@ Warm, light and editorial — inspired by derivenotes.com.
 | `--olive` | `#728557` | Primary accent |
 | `--rust` | `#B83A2D` | Secondary accent, used sparingly |
 
-Playfair Display for headings, Inter for body, JetBrains Mono for labels, course
-codes and tags. The faint graph-paper texture is deliberately confined to the
+Playfair Display for headings, Inter for body, JetBrains Mono for labels,
+category chips and tags. The faint graph-paper texture is deliberately confined to the
 `.gridpaper` sections (hero and charity page) so it never sits behind body copy.
 
 ## Structure
 
-- `index.html` — hero, facts strip, about, project cards, charity teaser, contact
-- `projects.html` — three project write-ups
-- `charity.html` — coming soon
+- `index.html`: hero, facts strip, about, project cards, charity teaser, contact
+- `projects.html`: three project write-ups
+- `charity.html`: coming soon
 
 Projects are **self-directed work Nikunj does outside university**, not coursework.
 Keep the wording clear of "academic", "course", "term" and "assignment". Project
@@ -41,11 +41,11 @@ metadata is Category / Year / Built with / Status.
   (`#frontier-lab`, `#nasdaq-backtest`, `#cgt-calculator`). Keep them in sync.
 
 The three projects, all his own work:
-1. **Frontier Lab** (portfoliomaximiser.netlify.app) — React portfolio optimiser,
+1. **Frontier Lab** (portfoliomaximiser.netlify.app): React portfolio optimiser,
    six assets in AUD, 2000 to 2025.
-2. **Nasdaq options backtest** — Python, DCA vs selling puts vs covered calls,
+2. **Nasdaq options backtest**: Python, DCA vs selling puts vs covered calls,
    Mar 1999 to Jul 2026. No live app.
-3. **CGT calculator** (newbudget.netlify.app) — React, models the proposed 2027
+3. **CGT calculator** (newbudget.netlify.app): React, models the proposed 2027
    indexation rules against the old 50% discount.
 
 ## Deploying
@@ -53,7 +53,7 @@ The three projects, all his own work:
 Netlify site **`nikunj-khurana`**, site ID `1e4aa53a-6e08-43c9-915b-422c25b0aa95`,
 live at https://nikunj-khurana.netlify.app
 
-**Deploy by pushing to GitHub** — `git push origin main` — and Netlify rebuilds
+**Deploy by pushing to GitHub** with `git push origin main`, and Netlify rebuilds
 automatically. The repo is `git@github.com:infrequentsnake/nikunj-website.git`
 (GitHub user `infrequentsnake`), authenticated with the existing SSH key at
 `~/.ssh/id_ed25519`. No credentials to enter.

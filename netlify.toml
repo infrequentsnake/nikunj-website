@@ -1,4 +1,4 @@
-# Static site — nothing to build, Netlify just publishes the folder as-is.
+# Static site. Nothing to build, Netlify just publishes the folder as-is.
 [build]
   publish = "."
   command = ""
@@ -15,7 +15,7 @@
   status = 200
 
 # Project docs and editor config ship in the folder but must not be readable
-# on the live site — CLAUDE.md carries the Netlify site ID.
+# on the live site, since CLAUDE.md carries the Netlify site ID.
 [[redirects]]
   from = "/.claude/*"
   to = "/index.html"

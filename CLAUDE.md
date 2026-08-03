@@ -35,10 +35,18 @@ codes and tags. The faint graph-paper texture is deliberately confined to the
 - `charity.html` — coming soon
 
 Projects are **self-directed work Nikunj does outside university**, not coursework.
-Keep the wording clear of "academic", "course", "term" and "assignment" — project
-metadata is Category / Year / Tools / Status.
+Keep the wording clear of "academic", "course", "term" and "assignment". Project
+metadata is Category / Year / Built with / Status.
 - Project cards in `index.html` link to anchors in `projects.html`
-  (`#project-one`, `#project-two`, `#project-three`). Keep them in sync.
+  (`#frontier-lab`, `#nasdaq-backtest`, `#cgt-calculator`). Keep them in sync.
+
+The three projects, all his own work:
+1. **Frontier Lab** (portfoliomaximiser.netlify.app) — React portfolio optimiser,
+   six assets in AUD, 2000 to 2025.
+2. **Nasdaq options backtest** — Python, DCA vs selling puts vs covered calls,
+   Mar 1999 to Jul 2026. No live app.
+3. **CGT calculator** (newbudget.netlify.app) — React, models the proposed 2027
+   indexation rules against the old 50% discount.
 
 ## Deploying
 
@@ -54,9 +62,19 @@ Do **not** use the Netlify MCP `deploy-site` operation: it returns an `npx` comm
 and there is no Node on this machine. It also publishes the *working directory*, so
 running it from the user's home folder would expose personal files.
 
+## House style
+
+- **No em dashes anywhere**, including code comments. Use commas, colons, full
+  stops or parentheses. This is an explicit standing instruction from the user.
+- **"UNSW" appears at most twice on the whole site.** It currently sits in the hero
+  eyebrow and the facts strip on `index.html`, and nowhere else. Don't reintroduce
+  it into titles, meta tags or the nav.
+- Prose follows the `humaniser` skill: vary sentence length, use contractions,
+  prefer concrete numbers over adjectives, and keep the honest caveats in.
+
 ## Outstanding
 
-The three projects are still placeholders (`Project One`, `CATEGORY`) awaiting real
-content. Contact details are real as of 3 August 2026. Every page carries a
-`<meta name="robots" content="noindex, nofollow">` while the project copy is
-placeholder — remove those three tags once the real write-ups land.
+Project copy and contact details are real as of 3 August 2026. A portrait is still
+missing (`assets/img/portrait.jpg`). Every page still carries
+`<meta name="robots" content="noindex, nofollow">`; remove all three tags when the
+user confirms they want the site indexed by search engines.

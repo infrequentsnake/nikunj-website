@@ -1,10 +1,10 @@
 /* ==========================================================================
-   Nikunj Khurana — personal site
+   Nikunj Khurana, personal site
    Design tokens. Change a value here and it updates everywhere.
    ========================================================================== */
 
 :root {
-  /* Colour — warm, light, editorial */
+  /* Colour: warm, light, editorial */
   --cream:       #FAF7F5;   /* page background */
   --cream-deep:  #F3EEE8;   /* alternating section background */
   --paper:       #FFFFFF;   /* cards */
@@ -55,7 +55,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Faint graph paper — a quiet nod to the maths. Confined to the hero and the
+/* Faint graph paper, a quiet nod to the maths. Confined to the hero and the
    charity page so it never sits behind body copy or reads as a false table rule. */
 .gridpaper { position: relative; }
 
@@ -106,7 +106,7 @@ a:hover { color: var(--ink); }
 
 strong { color: var(--ink); font-weight: 600; }
 
-/* Small uppercase mono label — used for course codes, section eyebrows, tags */
+/* Small uppercase mono label: category chips, section eyebrows, tags */
 .label {
   font-family: var(--font-mono);
   font-size: 0.7rem;
@@ -203,15 +203,6 @@ strong { color: var(--ink); font-weight: 600; }
   align-items: baseline;
   gap: 0.55rem;
   white-space: nowrap;
-}
-
-.brand__mark {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
-  color: var(--olive);
-  text-transform: uppercase;
 }
 
 .nav__links {
@@ -357,7 +348,7 @@ strong { color: var(--ink); font-weight: 600; }
 
 .hero__lead { max-width: 46ch; margin-bottom: 2.5rem; font-size: clamp(1.0625rem, 1.7vw, 1.2rem); color: var(--sage); }
 
-/* Faint ornament — a compound-growth curve behind the hero type */
+/* Faint ornament: a compound-growth curve behind the hero type */
 .hero__ornament {
   position: absolute;
   right: -6%;

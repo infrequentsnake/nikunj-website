@@ -4,16 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#FAF7F5">
-<title>Projects — Nikunj Khurana</title>
-<meta name="description" content="Self-directed projects in modelling, financial mathematics and data analysis by Nikunj Khurana, UNSW Sydney.">
-
-<!-- Keeps the site out of Google while the content is still placeholder.
-     DELETE THIS LINE when the real project write-ups and contact details are in. -->
-<meta name="robots" content="noindex, nofollow">
+<title>Projects | Nikunj Khurana</title>
+<meta name="description" content="A portfolio optimiser across six asset classes in AUD, a 26 year Nasdaq options backtest, and a calculator for Australia's proposed 2027 capital gains tax rules.">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Projects — Nikunj Khurana">
-<meta property="og:description" content="Self-directed projects in modelling, financial mathematics and data analysis.">
+<meta property="og:title" content="Projects | Nikunj Khurana">
+<meta property="og:description" content="A portfolio optimiser, a Nasdaq options backtest and a CGT calculator. All in Australian dollars.">
 
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,10 +25,7 @@
 <header class="site-header">
   <div class="container">
     <nav class="nav" aria-label="Primary">
-      <a class="brand" href="index.html">
-        Nikunj Khurana
-        <span class="brand__mark">UNSW</span>
-      </a>
+      <a class="brand" href="index.html">Nikunj Khurana</a>
 
       <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
         <svg class="icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -57,8 +50,8 @@
       <p class="label">Selected work</p>
       <h1>Projects</h1>
       <p class="lead">
-        Three things I&rsquo;ve taken on outside university &mdash; why I started each one, how I
-        approached it, and what the analysis actually concluded.
+        Three things I&rsquo;ve built outside university. Two are live and free to use. Every
+        figure is in Australian dollars, because that&rsquo;s the currency I actually spend.
       </p>
     </div>
   </section>
@@ -67,143 +60,173 @@
     <div class="container">
 
       <!-- ============================================================
-           PROJECT 1
-           Replace: title, category, year, tools, and the copy below.
+           PROJECT 1 : Frontier Lab
            ============================================================ -->
-      <article class="project-entry reveal" id="project-one">
+      <article class="project-entry reveal" id="frontier-lab">
         <aside class="project-entry__aside">
           <p class="project-entry__num">01</p>
           <dl class="meta-list">
             <dt>Category</dt>
-            <dd>Add a category</dd>
+            <dd>Portfolio optimisation</dd>
             <dt>Year</dt>
-            <dd>20XX</dd>
-            <dt>Tools</dt>
-            <dd>R, tidyverse, ggplot2</dd>
+            <dd>2026</dd>
+            <dt>Built with</dt>
+            <dd>React, hand&#8209;rolled SVG charts</dd>
             <dt>Status</dt>
-            <dd>Completed</dd>
+            <dd>Live</dd>
+            <dt>Try it</dt>
+            <dd><a href="https://portfoliomaximiser.netlify.app" target="_blank" rel="noopener">portfoliomaximiser<wbr>.netlify.app</a></dd>
           </dl>
         </aside>
 
         <div class="project-entry__body">
-          <h3>Project One</h3>
+          <h3>Frontier Lab</h3>
           <p>
-            One paragraph setting the scene. What made you want to build this, what data or problem
-            were you working with, and what question were you ultimately trying to answer? Write it
-            for someone smart who knows nothing about it &mdash; a recruiter should follow it easily.
+            The Nasdaq didn&rsquo;t fall 42&percnt; in 2008 if you&rsquo;re Australian. The dollar
+            fell alongside it, so in AUD terms the damage was closer to 26&percnt;. That one number
+            bothered me enough that I rebuilt the whole picture in the currency I actually spend.
+          </p>
+          <p>
+            Frontier Lab optimises across six sleeves: the ASX 200, Nasdaq 100, NIFTY 50, Europe,
+            Japan and gold. Everything is unhedged AUD with dividends included, running from 2000 to
+            2025 and rebalanced each January.
           </p>
 
-          <h4>What I did</h4>
+          <h4>What I built</h4>
           <ul class="tick-list">
-            <li>Cleaned and explored the dataset, documenting the assumptions behind each decision.</li>
-            <li>Built the model, describing why this method suited the problem over the alternatives.</li>
-            <li>Tested how sensitive the results were to the assumptions that mattered most.</li>
-            <li>Presented the findings with the limitations stated plainly.</li>
+            <li>Four objectives: maximum Sharpe, minimum volatility, the lowest&#8209;risk mix that still hits a return you name, and maximum CAGR.</li>
+            <li>Per&#8209;asset floors and ceilings, long only, with weights constrained to sum to 100&percnt;.</li>
+            <li>An efficient frontier plotted against thousands of random mixes, so you can see how much of the space is genuinely worse than the frontier.</li>
+            <li>Growth of &dollar;10,000 on a log scale, plus the return for every individual year.</li>
           </ul>
 
           <h4>What it showed</h4>
           <p>
-            The headline result, in numbers where you can. Then the honest caveat &mdash; what the
-            model could not capture, and what you&rsquo;d do differently with more time or better data.
+            The maximum&#8209;Sharpe mix puts 57&percnt; into gold and returns 10.9&percnt; a year at
+            8.9&percnt; volatility, a Sharpe ratio of 0.81. An equal&#8209;weight portfolio of the same
+            six assets manages 8.4&percnt; at 13.0&percnt; volatility, a Sharpe of 0.40. Gold does that
+            work because it&rsquo;s negatively correlated with every equity sleeve in the set and
+            still compounded above 10&percnt; over the period.
           </p>
 
           <div class="callout">
-            <strong>Takeaway:</strong> the one sentence you&rsquo;d want someone to remember about
-            this project.
+            <strong>The honest caveat:</strong> the weights are fitted in&#8209;sample. History
+            doesn&rsquo;t have to agree with the future, and past covariances aren&rsquo;t a promise
+            about future ones.
           </div>
         </div>
       </article>
 
       <!-- ============================================================
-           PROJECT 2
+           PROJECT 2 : Nasdaq options backtest
            ============================================================ -->
-      <article class="project-entry reveal" id="project-two">
+      <article class="project-entry reveal" id="nasdaq-backtest">
         <aside class="project-entry__aside">
           <p class="project-entry__num">02</p>
           <dl class="meta-list">
             <dt>Category</dt>
-            <dd>Add a category</dd>
+            <dd>Backtest</dd>
             <dt>Year</dt>
-            <dd>20XX</dd>
-            <dt>Tools</dt>
-            <dd>Excel, VBA</dd>
+            <dd>2026</dd>
+            <dt>Built with</dt>
+            <dd>Python, matplotlib</dd>
+            <dt>Period</dt>
+            <dd>Mar 1999 to Jul 2026</dd>
             <dt>Status</dt>
-            <dd>Completed</dd>
+            <dd>Complete</dd>
           </dl>
         </aside>
 
         <div class="project-entry__body">
-          <h3>Project Two</h3>
+          <h3>Nasdaq options backtest</h3>
           <p>
-            One paragraph setting the scene. What made you want to build this, what data or problem
-            were you working with, and what question were you ultimately trying to answer? Write it
-            for someone smart who knows nothing about it &mdash; a recruiter should follow it easily.
+            I wanted to know whether selling options on the Nasdaq&#8209;100 beats simply buying it.
+            So I ran all three approaches from QQQ&rsquo;s first day of trading in March 1999
+            through to July 2026. That&rsquo;s 328 months, with every figure converted to AUD.
           </p>
 
-          <h4>What I did</h4>
+          <h4>What I tested</h4>
           <ul class="tick-list">
-            <li>Set out the cash flows and the term structure the valuation depended on.</li>
-            <li>Built the model, describing why this method suited the problem over the alternatives.</li>
-            <li>Stress-tested the result against movements in the key rate assumptions.</li>
-            <li>Wrote up the recommendation for a non-technical reader.</li>
+            <li>Dollar&#8209;cost averaging &dollar;1,000 a month, with no timing and no cleverness.</li>
+            <li>Selling a cash&#8209;secured at&#8209;the&#8209;money put every month, taking assignment when it lands, then selling again.</li>
+            <li>Holding 100 shares and writing an at&#8209;the&#8209;money covered call every month.</li>
           </ul>
 
           <h4>What it showed</h4>
           <p>
-            The headline result, in numbers where you can. Then the honest caveat &mdash; what the
-            model could not capture, and what you&rsquo;d do differently with more time or better data.
+            Dollar&#8209;cost averaging put in &dollar;328k and finished at &dollar;3.57M, or
+            14.6&percnt; a year. The put strategy finished at &dollar;13.55M, which looks like a
+            rout until you notice it demanded &dollar;2.14M of capital to get there, and asked for it
+            at the ugliest possible moments. There was &dollar;316k of forced buying during 2022
+            alone, while the index was falling. Per dollar actually deployed it returned
+            14.9&percnt;. Thirty basis points over doing nothing, in exchange for 132 assignments and
+            327 monthly decisions.
+          </p>
+          <p>
+            The covered call is the one that stings. It collected &dollar;204k in premium across the
+            run and still finished behind simply holding those same 100 shares and letting the cash
+            sit idle, 6.3&percnt; a year against 6.75&percnt;. The shares were called away in 195
+            months out of 327, and every time I&rsquo;d have bought them back higher. The
+            Nasdaq&rsquo;s entire return lives in a handful of violent up&#8209;months, and those are
+            exactly the months this strategy sells away for a few hundred dollars.
           </p>
 
           <div class="callout">
-            <strong>Takeaway:</strong> the one sentence you&rsquo;d want someone to remember about
-            this project.
+            <strong>Takeaway:</strong> the boring strategy returned 14.6&percnt; a year and never
+            once asked me for money I didn&rsquo;t have.
           </div>
         </div>
       </article>
 
       <!-- ============================================================
-           PROJECT 3
+           PROJECT 3 : CGT calculator
            ============================================================ -->
-      <article class="project-entry reveal" id="project-three">
+      <article class="project-entry reveal" id="cgt-calculator">
         <aside class="project-entry__aside">
           <p class="project-entry__num">03</p>
           <dl class="meta-list">
             <dt>Category</dt>
-            <dd>Add a category</dd>
+            <dd>Tax modelling</dd>
             <dt>Year</dt>
-            <dd>20XX</dd>
-            <dt>Tools</dt>
-            <dd>Python, NumPy, pandas</dd>
+            <dd>2026</dd>
+            <dt>Built with</dt>
+            <dd>React</dd>
             <dt>Status</dt>
-            <dd>Ongoing</dd>
+            <dd>Live</dd>
+            <dt>Try it</dt>
+            <dd><a href="https://newbudget.netlify.app" target="_blank" rel="noopener">newbudget<wbr>.netlify.app</a></dd>
           </dl>
         </aside>
 
         <div class="project-entry__body">
-          <h3>Project Three</h3>
+          <h3>CGT calculator</h3>
           <p>
-            One paragraph setting the scene. What made you want to build this, what data or problem
-            were you working with, and what question were you ultimately trying to answer? Write it
-            for someone smart who knows nothing about it &mdash; a recruiter should follow it easily.
+            The 2026 to 2027 Federal Budget proposed replacing the 50&percnt; capital gains discount
+            with cost&#8209;base indexation plus a 30&percnt; minimum tax rate, intended to apply to
+            gains accruing from 1 July 2027. Whether that leaves you better or worse off depends on
+            inflation, your marginal rate and how long you hold. It isn&rsquo;t something you can
+            work out in your head, so I built the thing that works it out.
           </p>
 
-          <h4>What I did</h4>
+          <h4>What I built</h4>
           <ul class="tick-list">
-            <li>Framed the risk being measured and chose the distribution to model it with.</li>
-            <li>Ran the simulation and checked the output against an analytical benchmark.</li>
-            <li>Quantified the tail &mdash; the outcomes that actually drive the capital decision.</li>
-            <li>Summarised what the result means for the decision at hand.</li>
+            <li>Contributions that escalate as a percentage of your balance, with a floor and a ceiling, so a savings plan compounds the way a real one does.</li>
+            <li>Every monthly contribution tracked as its own parcel with its own acquisition date, and the 12&#8209;month rule applied per parcel.</li>
+            <li>Both proposed transition methods for assets held across the cutover, market value and time apportionment.</li>
+            <li>A side&#8209;by&#8209;side of what you keep under the old discount against the new indexation rules.</li>
           </ul>
 
           <h4>What it showed</h4>
           <p>
-            The headline result, in numbers where you can. Then the honest caveat &mdash; what the
-            model could not capture, and what you&rsquo;d do differently with more time or better data.
+            In the scenario the calculator opens with, the new rules cost &dollar;3,385 more in tax
+            and pull the after&#8209;tax return down from 6.42&percnt; to 5.69&percnt; a year.
+            Indexation only beats the discount when inflation runs high relative to your real
+            return, and at 2.5&percnt; CPI it generally doesn&rsquo;t.
           </p>
 
           <div class="callout">
-            <strong>Takeaway:</strong> the one sentence you&rsquo;d want someone to remember about
-            this project.
+            <strong>Worth stating plainly:</strong> this is analysis tooling, not tax advice. The
+            rules are still proposals and the detail may well change before July 2027.
           </div>
         </div>
       </article>
@@ -218,8 +241,8 @@
           <p class="label">Next</p>
           <h2>More on the way</h2>
           <p>
-            Charity projects are being written up now &mdash; the same analytical approach, applied
-            to causes worth the effort.
+            Charity projects are being written up now, using the same methods somewhere the stakes
+            aren&rsquo;t only financial.
           </p>
         </div>
         <a class="btn btn--ghost" href="charity.html">

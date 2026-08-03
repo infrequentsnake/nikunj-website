@@ -1,4 +1,4 @@
-/* Nikunj Khurana — site behaviour.
+/* Nikunj Khurana, site behaviour.
    Three small things: mobile nav, sticky header hairline, scroll reveals. */
 
 (function () {

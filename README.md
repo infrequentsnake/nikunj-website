@@ -57,5 +57,9 @@ block with a matching summary card in `index.html`. The two are linked by anchor
 
 ## Deploying
 
-Hosted on Netlify. Because there is no build step, deploying is just publishing
-this folder. Ask Claude in this chat to push the changes and it will handle it.
+Hosted on Netlify at <https://nikunj-khurana.netlify.app>, deployed from
+<https://github.com/infrequentsnake/nikunj-website>.
+
+Pushing to `main` triggers a rebuild — there is no build step, so Netlify just
+publishes the folder. Ask Claude in this chat to make a change and it will commit
+and push for you.

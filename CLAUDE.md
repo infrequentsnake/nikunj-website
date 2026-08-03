@@ -45,10 +45,14 @@ metadata is Category / Year / Tools / Status.
 Netlify site **`nikunj-khurana`**, site ID `1e4aa53a-6e08-43c9-915b-422c25b0aa95`,
 live at https://nikunj-khurana.netlify.app
 
-Deploy with the Netlify MCP `deploy-site` operation using that site ID. **Only ever
-deploy with this folder as the working directory** — the deploy tool publishes the
-working directory, and this project previously sat inside the user's home folder
-where a deploy would have exposed personal files.
+**Deploy by pushing to GitHub** — `git push origin main` — and Netlify rebuilds
+automatically. The repo is `git@github.com:infrequentsnake/nikunj-website.git`
+(GitHub user `infrequentsnake`), authenticated with the existing SSH key at
+`~/.ssh/id_ed25519`. No credentials to enter.
+
+Do **not** use the Netlify MCP `deploy-site` operation: it returns an `npx` command,
+and there is no Node on this machine. It also publishes the *working directory*, so
+running it from the user's home folder would expose personal files.
 
 ## Outstanding
 

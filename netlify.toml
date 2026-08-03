@@ -1,0 +1,47 @@
+# Static site — nothing to build, Netlify just publishes the folder as-is.
+[build]
+  publish = "."
+  command = ""
+
+# Serve /projects and /charity without the .html extension.
+[[redirects]]
+  from = "/projects"
+  to = "/projects.html"
+  status = 200
+
+[[redirects]]
+  from = "/charity"
+  to = "/charity.html"
+  status = 200
+
+# Project docs and editor config ship in the folder but must not be readable
+# on the live site — CLAUDE.md carries the Netlify site ID.
+[[redirects]]
+  from = "/.claude/*"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/CLAUDE.md"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/README.md"
+  to = "/index.html"
+  status = 404
+  force = true
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

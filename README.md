@@ -21,13 +21,14 @@ Then open <http://localhost:4321>.
 ```
 nikunj-website/
 ├── index.html          Home: hero, facts, about, project cards, charity teaser, contact
-├── projects.html       The three project write-ups (self-directed, not coursework)
+├── projects.html       The project write-ups (self-directed, not coursework)
 ├── charity.html        Charity projects, coming soon
 ├── netlify.toml        Deploy config (no build; clean URLs; cache headers)
 └── assets/
     ├── css/style.css   All styling. Design tokens live at the very top.
     ├── js/main.js      Mobile nav, sticky header, scroll reveals
-    └── img/favicon.svg
+    ├── img/favicon.svg
+    └── downloads/      Files offered for download, e.g. the Excel calculator
 ```
 
 ## Editing
@@ -46,10 +47,11 @@ across every page.
 
 **Projects.** Each write-up in `projects.html` is one `<article class="project-entry">`
 block with a matching summary card in `index.html`. The two are linked by anchor
-(`#frontier-lab`, `#nasdaq-backtest`, `#cgt-calculator`), so keep them in sync when renaming.
+(`#buying-house-calculator`, `#frontier-lab`, ...), so keep them in sync when renaming.
 
-**Adding a fourth project.** Copy an existing `project-entry` block, give it a new
-`id`, and copy a `project-card` in `index.html` pointing at that `id`.
+**Adding another project.** Copy an existing `project-entry` block, give it a new
+`id`, and copy a `project-card` in `index.html` pointing at that `id`. Don't write
+the number of projects into any sentence, since the list keeps growing.
 
 ## Still to fill in
 

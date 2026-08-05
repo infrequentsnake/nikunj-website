@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#FAF7F5">
 <title>Projects | Nikunj Khurana</title>
-<meta name="description" content="A portfolio optimiser across six asset classes in AUD, a 26 year Nasdaq options backtest, and a calculator for Australia's proposed 2027 capital gains tax rules.">
+<meta name="description" content="A downloadable Sydney house buying calculator, a portfolio optimiser across six asset classes in AUD, a 26 year Nasdaq options backtest, and a calculator for Australia's proposed 2027 capital gains tax rules.">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Projects | Nikunj Khurana">
-<meta property="og:description" content="A portfolio optimiser, a Nasdaq options backtest and a CGT calculator. All in Australian dollars.">
+<meta property="og:description" content="A downloadable house buying calculator, a portfolio optimiser, a Nasdaq options backtest and a CGT calculator. All in Australian dollars.">
 
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,8 +64,8 @@
       <p class="label">Selected work</p>
       <h1>Projects</h1>
       <p class="lead">
-        Three things I’ve built outside university. Two are live and free to use. Every
-        figure is in Australian dollars, because that’s the currency I actually spend.
+        Things I’ve built outside university, most of them free to use. Every figure is in
+        Australian dollars, because that’s the currency I actually spend.
       </p>
     </div>
   </section>
@@ -74,13 +74,77 @@
     <div class="container">
 
       <!-- ============================================================
-           EDIT: Project 1, Frontier Lab.
+           EDIT: Buying House Calculator.
+           The sidebar facts, heading, paragraphs, bullet list and the
+           callout box are all safe to reword.
+           ============================================================ -->
+      <article class="project-entry reveal" id="buying-house-calculator">
+        <aside class="project-entry__aside">
+          <p class="project-entry__num">01</p>
+          <dl class="meta-list">
+            <dt>Category</dt>
+            <dd>Financial modelling</dd>
+            <dt>Year</dt>
+            <dd>2026</dd>
+            <dt>Built with</dt>
+            <dd>Excel, roughly 19,242 formulas</dd>
+            <dt>Status</dt>
+            <dd>Live</dd>
+            <dt>Download</dt>
+            <dd><a href="assets/downloads/buying-house-calculator.xlsx"
+                   download="Buying House Calculator by Nikunj Khurana.xlsx">Get the file (390 KB)</a></dd>
+          </dl>
+        </aside>
+
+        <div class="project-entry__body">
+          <h3>Buying House Calculator</h3>
+          <p>
+            A bank can tell you what you are allowed to borrow in about four minutes. It cannot
+            tell you whether you will still have money at 75. That gap is the whole Sydney housing
+            conversation, and almost nobody models it. This is my most ambitious project so far,
+            and it exists to answer one question properly: how much house can you actually buy?
+          </p>
+          <p>
+            The model runs two paths month by month, for any age between 18 and 75. Same income,
+            same groceries, same returns, same retirement age. The only things that change are when
+            you buy and whether you rent while you wait. It forecasts your investment balances
+            without pretending you will stop living in the meantime.
+          </p>
+
+          <h4>What it models</h4>
+          <ul class="tick-list">
+            <li>Retirement drawdowns grossed back up through the Australian tax brackets, so the monthly figure you need after tax is the one the model solves for.</li>
+            <li>Rent and living expenses indexed at CPI, rather than held flat and quietly flattering the buy case.</li>
+            <li>Per-parcel capital gains tax on the shares you sell to fund the deposit, including the 12-month rule and the proposed 2027 reform.</li>
+            <li>A contribution ramp, a splurge allowance and a minimum cash bucket, because a plan you cannot stick to is not a plan.</li>
+            <li>Over 30 inputs, from mortgage rate and deposit percentage through to groceries and eating out.</li>
+          </ul>
+
+          <h4>What it showed</h4>
+          <p>
+            It deliberately does not hand you a verdict on renting against buying. What it does is
+            show you which of your own assumptions is quietly deciding the entire result. Change
+            the CPI figure or the age you buy at, and the answer often flips. That is the honest
+            finding: most of these arguments are really arguments about assumptions nobody states
+            out loud.
+          </p>
+
+          <div class="callout">
+            <strong>Worth stating plainly:</strong> this is a model, not financial advice. Three
+            months of building and seven iterations went into it, and it is still only as good as
+            the numbers you put in.
+          </div>
+        </div>
+      </article>
+
+      <!-- ============================================================
+           EDIT: Frontier Lab.
            The sidebar facts, heading, paragraphs, bullet list and the
            callout box are all safe to reword.
            ============================================================ -->
       <article class="project-entry reveal" id="frontier-lab">
         <aside class="project-entry__aside">
-          <p class="project-entry__num">01</p>
+          <p class="project-entry__num">02</p>
           <dl class="meta-list">
             <dt>Category</dt>
             <dd>Portfolio optimisation</dd>
@@ -134,13 +198,13 @@
       </article>
 
       <!-- ============================================================
-           EDIT: Project 2, Nasdaq options backtest.
+           EDIT: Nasdaq options backtest.
            The sidebar facts, heading, paragraphs, bullet list and the
            callout box are all safe to reword.
            ============================================================ -->
       <article class="project-entry reveal" id="nasdaq-backtest">
         <aside class="project-entry__aside">
-          <p class="project-entry__num">02</p>
+          <p class="project-entry__num">03</p>
           <dl class="meta-list">
             <dt>Category</dt>
             <dd>Backtest</dd>
@@ -197,13 +261,13 @@
       </article>
 
       <!-- ============================================================
-           EDIT: Project 3, CGT calculator.
+           EDIT: CGT calculator.
            The sidebar facts, heading, paragraphs, bullet list and the
            callout box are all safe to reword.
            ============================================================ -->
       <article class="project-entry reveal" id="cgt-calculator">
         <aside class="project-entry__aside">
-          <p class="project-entry__num">03</p>
+          <p class="project-entry__num">04</p>
           <dl class="meta-list">
             <dt>Category</dt>
             <dd>Tax modelling</dd>

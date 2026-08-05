@@ -5,6 +5,9 @@ Personal site for **Nikunj Khurana**, Actuarial Studies student.
 Plain HTML, CSS and a little vanilla JavaScript. No build step, no dependencies,
 no `node_modules`. Edit a file, refresh the browser, done.
 
+**Changing the wording yourself? See [EDITING.md](EDITING.md).** No installs
+needed, it all happens in the browser.
+
 ## Run it locally
 
 ```bash

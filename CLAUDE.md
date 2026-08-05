@@ -82,7 +82,9 @@ running it from the user's home folder would expose personal files.
 
 ## Outstanding
 
-Project copy and contact details are real as of 3 August 2026. A portrait is still
-missing (`assets/img/portrait.jpg`). Every page still carries
+Project copy and contact details are real as of 3 August 2026. The portrait lives at
+`assets/img/portrait.png` and has a transparent background, so `.portrait` keeps its
+cream fill behind it. It is only 433px wide, so it is soft on retina screens; a
+larger original would fix that. Every page still carries
 `<meta name="robots" content="noindex, nofollow">`; remove all three tags when the
 user confirms they want the site indexed by search engines.

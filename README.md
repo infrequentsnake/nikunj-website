@@ -57,8 +57,8 @@ the number of projects into any sentence, since the list keeps growing.
 
 - [x] Real project titles, categories, years and write-ups
 - [x] Contact email, phone and LinkedIn
-- [ ] Portrait photo. Drop it at `assets/img/portrait.jpg` and swap the
-      `.portrait__placeholder` block in `index.html` for an `<img>`
+- [x] Portrait photo at `assets/img/portrait.png` (transparent background, so the
+      cream card colour shows through). Replace that file to change the photo.
 
 ## Deploying
 

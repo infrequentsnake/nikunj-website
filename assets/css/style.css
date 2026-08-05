@@ -466,12 +466,22 @@ strong { color: var(--ink); font-weight: 600; }
   padding: clamp(1.85rem, 4.5vw, 3.25rem);
   box-shadow: var(--shadow-md);
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: clamp(2rem, 5vw, 3.5rem);
   align-items: center;
 }
 
-@media (max-width: 900px) { .feature { grid-template-columns: 1fr; } }
+/* Two columns only when the numbers panel is actually present. Without this the
+   grid keeps an empty second column and the text sits in a narrow strip. */
+.feature:has(.feature__stats) { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); }
+
+/* With no panel, keep the measure readable rather than one long line. */
+.feature > div:only-child { max-width: 60ch; }
+
+@media (max-width: 900px) {
+  .feature,
+  .feature:has(.feature__stats) { grid-template-columns: minmax(0, 1fr); }
+}
 
 .feature__badge {
   display: inline-flex;

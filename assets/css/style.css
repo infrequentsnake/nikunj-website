@@ -549,7 +549,7 @@ strong { color: var(--ink); font-weight: 600; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--sage);
-  margin: 1.4rem 0 0;
+  margin: 1.9rem 0 0;
 
   /* Each part is its own flex item, and the dot is an ::after on the part before
      it. That way a wrap can never leave a dot stranded at the start of a line. */

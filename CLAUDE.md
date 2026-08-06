@@ -67,6 +67,18 @@ Do **not** use the Netlify MCP `deploy-site` operation: it returns an `npx` comm
 and there is no Node on this machine. It also publishes the *working directory*, so
 running it from the user's home folder would expose personal files.
 
+## Caching
+
+`netlify.toml` sets `max-age=0, must-revalidate` on CSS, JS and images. Do **not**
+put a long `max-age` back. Filenames never change (no build step), so a long cache
+leaves returning visitors applying an old stylesheet to new HTML, which is exactly
+what happened on 6 August 2026: the note under the download button rendered as
+unstyled run-together text for anyone who had visited in the previous week.
+
+The `?v=2` on the `style.css` and `main.js` links was a one-off to force browsers
+that had already cached the old file for seven days. With revalidation in place,
+ordinary edits now propagate on their own, so there is no need to bump it again.
+
 ## House style
 
 - **No em dashes anywhere**, including code comments. Use commas, colons, full

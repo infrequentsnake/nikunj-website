@@ -47,7 +47,25 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Frame-Options = "SAMEORIGIN"
 
+# Revalidate rather than cache blind. There is no build step here, so filenames
+# never change, which means a long max-age leaves returning visitors styling new
+# HTML with an old stylesheet. Revalidation costs one 304 and is always correct.
 [[headers]]
-  for = "/assets/*"
+  for = "/assets/css/*"
   [headers.values]
-    Cache-Control = "public, max-age=604800"
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/downloads/*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"

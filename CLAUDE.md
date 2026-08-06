@@ -71,6 +71,8 @@ running it from the user's home folder would expose personal files.
 
 - **No em dashes anywhere**, including code comments. Use commas, colons, full
   stops or parentheses. This is an explicit standing instruction from the user.
+  The one agreed exception is attributing a quotation: the About heading on
+  `index.html` ends "... hope." — Amie Kaufman. Leave that one alone.
 - **Never state how many projects there are.** No "three things I've built", no
   "two are live". More projects are coming, and counts go stale the moment one
   lands. This is an explicit standing instruction from the user.

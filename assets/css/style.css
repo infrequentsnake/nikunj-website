@@ -549,7 +549,28 @@ strong { color: var(--ink); font-weight: 600; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--sage);
-  margin: 1rem 0 0;
+  margin: 1.4rem 0 0;
+
+  /* Each part is its own flex item, and the dot is an ::after on the part before
+     it. That way a wrap can never leave a dot stranded at the start of a line. */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 0.85rem;
+  row-gap: 0.4rem;
+}
+
+.feature__note span:not(:last-child)::after {
+  content: "·";
+  color: var(--olive);
+  margin-left: 0.85rem;
+}
+
+/* Too narrow for one line: stack the parts and drop the dots, so the phrases
+   never run together into one unreadable string. */
+@media (max-width: 560px) {
+  .feature__note { flex-direction: column; align-items: flex-start; row-gap: 0.45rem; }
+  .feature__note span:not(:last-child)::after { content: none; }
 }
 
 /* ==========================================================================
